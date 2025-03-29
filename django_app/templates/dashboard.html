@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="text-center mb-4">
+  <h1 class="display-4">Welcome to Your Dashboard</h1>
+  <p class="lead">Overview of your recent activity and statistics.</p>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="card mb-4 shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">Statistics</h5>
+        <p class="card-text">View your performance metrics and data trends.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card mb-4 shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">Notifications</h5>
+        <p class="card-text">Stay updated with the latest alerts and messages.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card mb-4 shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">Reports</h5>
+        <p class="card-text">Access detailed reports of your activities.</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
