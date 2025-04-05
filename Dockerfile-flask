@@ -6,7 +6,7 @@ WORKDIR /app
 COPY flask_app/requirements.txt /app/
 RUN pip install --upgrade pip && pip install -r requirements.txt
 
-# Copy the Flask app code
+# Copy the Flask application code
 COPY flask_app /app
 
 EXPOSE 5000

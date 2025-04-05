@@ -1,36 +1,41 @@
-/* flask_app/static/css/style.css */
+/* Flask Custom CSS */
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #ece9e6, #ffffff);
+    color: #333;
     margin: 0;
     padding: 0;
 }
-header {
-    background-color: #007BFF;
+
+.custom-navbar {
+    background: linear-gradient(90deg, #ff416c, #ff4b2b);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.custom-navbar .navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.custom-navbar .nav-link {
+    font-size: 1.1rem;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover {
     color: #fff;
-    padding: 1rem;
 }
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-}
-nav ul li {
-    margin: 0;
-}
-nav ul li a {
+
+.footer.custom-footer {
+    background: #ff416c;
     color: #fff;
-    text-decoration: none;
-}
-main {
-    padding: 20px;
-}
-footer {
-    background-color: #007BFF;
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
-    position: fixed;
+    padding: 1rem 0;
     width: 100%;
-    bottom: 0;
+}
+
+.container {
+    padding-top: 2rem;
 }
