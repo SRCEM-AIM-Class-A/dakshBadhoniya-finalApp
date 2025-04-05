@@ -1,114 +1,114 @@
-# Flask & Django Web Applications with Docker Compose
+# 🧩 FinalApp — Combined Flask & Django Microservices
 
-## 📌 Overview
-
-This project demonstrates the development and deployment of two simple web applications built using Flask and Django frameworks, containerized using Docker, and orchestrated with Docker Compose.
-
-- 🧠 **Flask App:** A basic app showcasing routing, forms, and input validation.
-- 🏗️ **Django App:** A full-stack application that lists documents, allows item creation, deletion, and includes an admin panel.
-- 🐳 **Docker Compose:** Both apps run in isolated containers and are exposed via different ports locally.
+This project is a full-stack application combining a **Flask microservice** and a **Django-based web system** using Docker Compose. The system is modular, scalable, and suitable for modern web deployment and containerization practices.
 
 ---
 
-## 🚀 Technologies Used
+## 🚀 Getting Started
 
-- Python 3
-- Flask
-- Django
+### ✅ Prerequisites
+
 - Docker
 - Docker Compose
-- HTML/CSS (Bootstrap 4)
 
----
-
-## 📁 Project Structure
-
-```
-project-root/
-│
-├── flask_app/
-│   ├── app.py
-│   ├── templates/
-│   │   └── index.html
-│   │   └── greet.html
-│   └── Dockerfile
-│
-├── django_app/
-│   ├── myproject/
-│   ├── documents/
-│   │   └── templates/documents/document_list.html
-│   └── Dockerfile
-│
-├── docker-compose.yml
-└── README.md
-```
-
----
-
-## 🔥 Features
-
-### Flask App
-- 🏠 Homepage that says **"Hello, World!"**
-- 📥 Form for user's name and age.
-- 🙅 Error handling for invalid inputs.
-
-### Django App
-- 📃 Homepage displays list of documents (pre-filled).
-- ➕ Add new documents.
-- ❌ Delete existing documents.
-- 🔐 Admin panel to manage documents.
-
----
-
-## 🛠️ How to Run
-
-### 🚨 Prerequisites:
-- Docker installed
-- Docker Compose installed
-
----
-
-### 🧪 Steps to Run Locally:
-
-1. **Clone the repository:**
-
-```bash
-git clone https://github.com/your-username/flask-django-docker-app.git
-cd flask-django-docker-app
-```
-
-2. **Build and Start Containers:**
+### 🔧 Build & Run the Project
 
 ```bash
 docker-compose up --build
 ```
 
-3. **Access Applications:**
-- Flask App: [http://localhost:5000](http://localhost:5000)
-- Django App: [http://localhost:8000](http://localhost:8000)
-- Django Admin: [http://localhost:8000/admin](http://localhost:8000/admin)
+---
+
+## 🗂 Project Structure
+
+```
+dakshBadhoniya-finalApp/
+│
+├── docker-compose.yml
+├── Dockerfile-django
+├── Dockerfile-flask
+│
+├── flask_app/
+│   ├── app.py
+│   ├── requirements.txt
+│   └── templates/
+│       └── greeting.html
+│
+├── django_app/
+│   ├── manage.py
+│   ├── requirements.txt
+│   ├── django_app/                 # Django config package
+│   │   ├── __init__.py
+│   │   ├── settings.py
+│   │   ├── urls.py
+│   │   └── wsgi.py
+│   │
+│   ├── dashboard/                  # App 1
+│   │   ├── __init__.py
+│   │   ├── admin.py
+│   │   ├── apps.py
+│   │   ├── models.py
+│   │   ├── tests.py
+│   │   └── views.py
+│   │
+│   ├── documents/                  # App 2
+│   │   ├── __init__.py
+│   │   ├── admin.py
+│   │   ├── apps.py
+│   │   ├── models.py
+│   │   ├── tests.py
+│   │   └── views.py
+│   │
+│   ├── user/                       # App 3
+│   │   ├── __init__.py
+│   │   ├── admin.py
+│   │   ├── apps.py
+│   │   ├── models.py
+│   │   ├── tests.py
+│   │   └── views.py
+│   │
+│   └── templates/                 # Shared HTML templates
+│       ├── base.html
+│       ├── dashboard.html
+│       ├── document_list.html
+│       └── profile.html
+```
 
 ---
 
-### 🔑 Django Admin Credentials
+## 🌐 Flask App Overview
 
-| Field       | Value        |
-|-------------|--------------|
-| Username    | admin        |
-| Password    | admin123     |
+- Serves a simple greeting page at `/hello`
+- Lightweight and minimal for quick response microservices
 
 ---
 
-## 🐋 Docker Hub Links
+## 🛠 Django App Overview
 
-- Flask Image: [https://hub.docker.com/r/pilcrow3000/final-flask-app](https://hub.docker.com/r/pilcrow3000/final-flask-app)
-- Django Image: [https://hub.docker.com/r/pilcrow3000/final-django-app](https://hub.docker.com/r/pilcrow3000/final-django-app)
+- Fully-featured Django project with:
+  - User authentication system
+  - Dashboard display
+  - Document handling
+- Modular apps:
+  - `dashboard`: UI summaries
+  - `documents`: CRUD operations
+  - `user`: profile & auth
 
 ---
 
-## 👤 Developer
+## 📦 Docker Compose Services
 
-**Daksh Badhoniya**  
-📫 Email: dakshbadhoniya1@gmail.com  
-📍 Location: Nagpur, India  
-💼 Aspiring AIML Engineer
+- `flask`: Flask microservice container
+- `django`: Django web app container
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+## ✨ Author
+
+Created by Daksh Badhoniya and team.
